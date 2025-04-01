@@ -1,74 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>The Awful Reality of BT Wi-Fi</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>The Awful Reality of BT Wi-Fi</h1>
-        <p class="subtitle">Because BT Wi-Fi isn’t just slow—it’s emotional warfare.</p>
-    </header>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: url('https://www.transparenttextures.com/patterns/old-wall.png');
+    color: #2e1b0e;
+    line-height: 1.6;
+    background-color: #f9f6f1;
+}
 
-    <section class="intro">
-        <h2>BT Wi-Fi: Predatory Connectivity</h2>
-        <p>
-            Ever been promised lightning-fast speeds only to discover BT actually means "Barely There"?<br>
-            BT says your speeds are "guaranteed"—<em>at your wall socket.</em> But if your devices can't use it, well, that's apparently your problem.
-            BT’s customer service is legendary—meaning it exists purely in myth.
-        </p>
-    </section>
+header {
+    background: linear-gradient(to right, #6400aa, #0072CE);
+    color: #f8f8ff;
+    padding: 40px 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+}
 
-    <section class="issues">
-        <h2>The BT Wi-Fi Hall of Shame:</h2>
-        <ul>
-            <li><strong>Predatory Promises:</strong> Guaranteed speeds at the socket, reality elsewhere.</li>
-            <li><strong>Customer Service Roulette:</strong> Designed to wear you down.</li>
-            <li><strong>Legally Safe Lies:</strong> Speeds promised, enjoyment omitted.</li>
-        </ul>
-    </section>
+.subtitle {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 1.1em;
+}
 
-    <section class="testimonials">
-        <h2>Real (but probably fictional) BT User Stories</h2>
-        <blockquote>"BT support taught me endurance—I spent more time on hold than online."</blockquote>
-        <blockquote>"Upload speed? BT thinks 'upload' is a new social media app."</blockquote>
-        <blockquote>"Streaming with BT is like watching Netflix on a calculator."</blockquote>
-    </section>
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-left: 8px solid #6400aa;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
 
-    <section class="interaction">
-        <h2>Do you also hate BT Wi-Fi?</h2>
-        <button id="hateButton">👍 Yes, BT Wi-Fi sucks!</button>
-        <p id="counter">0 people hate BT Wi-Fi</p>
-    </section>
+h2 {
+    color: #6400aa;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-transform: uppercase;
+    border-bottom: 2px solid #6400aa;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
 
-    <footer>
-        <p>This site is satire intended purely for entertainment. Not affiliated with BT. But seriously, fix your Wi-Fi, BT.</p>
-        <p id="visitCount"></p>
-    </footer>
+button {
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+}
 
-<script>
-    // Dissatisfaction Counter
-    let hateCount = localStorage.getItem('hateBT') ? parseInt(localStorage.getItem('hateBT')) : 0;
-    const counter = document.getElementById('counter');
-    counter.textContent = `${hateCount} people hate BT Wi-Fi`;
+button:hover {
+    background-color: #6400aa;
+    transform: scale(1.05);
+}
 
-    document.getElementById('hateButton').addEventListener('click', function() {
-        hateCount++;
-        localStorage.setItem('hateBT', hateCount);
-        counter.textContent = `${hateCount} people hate BT Wi-Fi`;
-    });
+ul {
+    padding-left: 20px;
+}
 
-    // Visit Counter
-    if (!localStorage.getItem('btVisits')) {
-        localStorage.setItem('btVisits', 1);
-    } else {
-        let visits = parseInt(localStorage.getItem('btVisits')) + 1;
-        localStorage.setItem('btVisits', visits);
-    }
+li {
+    margin-bottom: 12px;
+}
 
-    document.getElementById('visitCount').textContent = 
-        `You've visited this page ${localStorage.getItem('btVisits')} times—each time BT still sucked.`;
-</script>
-</body>
-</html>
+blockquote {
+    border-left: 4px solid #0072CE;
+    padding-left: 15px;
+    color: #444;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95em;
+    color: #444;
+    border-top: 2px solid #6400aa;
+}
