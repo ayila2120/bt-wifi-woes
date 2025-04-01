@@ -1,69 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
+    font-family: 'Georgia', serif;
+    background: url('https://www.transparenttextures.com/patterns/old-wall.png');
+    color: #2e1b0e;
+    line-height: 1.6;
+    background-color: #f9f6f1;
 }
 
 header {
-    background-color: #ff4c4c;
-    color: white;
-    padding: 20px;
+    background: linear-gradient(to right, #6400aa, #0072CE);
+    color: #f8f8ff;
+    padding: 40px 20px;
     text-align: center;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .subtitle {
     font-style: italic;
+    margin-top: 10px;
+    font-size: 1.1em;
 }
 
 section {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-left: 8px solid #6400aa;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: left;
 }
 
-.interaction {
-    text-align: center;
+h2 {
+    color: #6400aa;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    text-transform: uppercase;
+    border-bottom: 2px solid #6400aa;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 button {
-    font-size: 16px;
-    padding: 10px 15px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #ff4c4c;
+    font-size: 18px;
+    padding: 12px 24px;
+    background-color: #8A2BE2;
     color: white;
-    transition: transform 0.1s;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
 }
 
-button:active {
-    transform: scale(0.95);
+button:hover {
+    background-color: #6400aa;
+    transform: scale(1.05);
 }
 
 ul {
-    list-style-type: square;
     padding-left: 20px;
 }
 
+li {
+    margin-bottom: 12px;
+}
+
 blockquote {
-    margin: 10px 0;
+    border-left: 4px solid #0072CE;
+    padding-left: 15px;
+    color: #444;
     font-style: italic;
-    color: #555;
-    border-left: 4px solid #ff4c4c;
-    padding-left: 10px;
+    margin: 20px 0;
 }
 
 footer {
+    background-color: #eee;
     text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    background-color: #ddd;
-    color: #666;
-    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.95em;
+    color: #444;
+    border-top: 2px solid #6400aa;
 }
